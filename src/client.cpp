@@ -234,16 +234,6 @@ extern "C" {
     g_status = ADDON_STATUS_UNKNOWN;
   } 
 
-  bool ADDON_HasSettings()
-  {
-    return true;
-  }
-
-  unsigned int ADDON_GetSettings(ADDON_StructSetting ***sSet)
-  {
-    return 0;
-  }
-
   ADDON_STATUS ADDON_SetSetting(const char *settingName, const void *settingValue)
   {
 #define UPDATE_STR(key, var)\
@@ -296,7 +286,7 @@ extern "C" {
 #undef UPDATE_STR
   }
 
-  void ADDON_FreeSettings()
+  void ADDON_Stop()
   {
   }
 
